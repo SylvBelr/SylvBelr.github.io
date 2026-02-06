@@ -1,0 +1,330 @@
+:root {
+  --color-ink: #1f1f29;
+  --color-slate: #40465a;
+  --color-mist: #f4f1ec;
+  --color-cream: #fcf8f3;
+  --color-accent: #2f6b5f;
+  --color-accent-strong: #1d4a42;
+  --color-highlight: #d86f44;
+  --shadow-soft: 0 18px 40px rgba(31, 31, 41, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 3.5rem;
+  --space-6: 5rem;
+}
+
+body {
+  font-family: "Source Serif 4", "Georgia", serif;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+p, li {
+  color: var(--color-slate);
+}
+
+a {
+  color: var(--color-accent-strong);
+}
+
+.masthead {
+  background: rgba(252, 248, 243, 0.95);
+  border-bottom: 1px solid rgba(31, 31, 41, 0.08);
+}
+
+.masthead__menu-item a {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.page__footer {
+  background: var(--color-mist);
+}
+
+.hero {
+  margin: var(--space-5) auto var(--space-6);
+  padding: var(--space-5);
+  background: linear-gradient(135deg, #f4f1ec 0%, #ffffff 100%);
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero__content {
+  max-width: 560px;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--color-highlight);
+  margin-bottom: var(--space-2);
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--space-1);
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+}
+
+.hero__summary {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-3);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.hero__panel {
+  background: var(--color-cream);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  border: 1px solid rgba(31, 31, 41, 0.08);
+}
+
+.hero__panel-item + .hero__panel-item {
+  margin-top: var(--space-3);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3);
+}
+
+.section__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.section--hero {
+  padding-top: var(--space-6);
+}
+
+.section--alt {
+  background: var(--color-mist);
+  border-radius: var(--radius-lg);
+  margin: var(--space-5) auto;
+}
+
+.section--cta {
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.section--cta h2,
+.section--cta p {
+  color: #fff;
+}
+
+.card-grid,
+.list-grid,
+.contact-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card {
+  background: #fff;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(31, 31, 41, 0.08);
+  box-shadow: 0 8px 22px rgba(31, 31, 41, 0.08);
+}
+
+.list-card {
+  background: #fff;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(31, 31, 41, 0.08);
+}
+
+.list-card__meta {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+}
+
+.list-card__authors,
+.list-card__venue {
+  margin-bottom: var(--space-1);
+}
+
+.list-card__links {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.text-link {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.button--primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.button--outline {
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  background: transparent;
+}
+
+.pill-list,
+.icon-list,
+.check-list,
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.pill-list li {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(47, 107, 95, 0.1);
+  color: var(--color-accent-strong);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+}
+
+.icon-list li::before {
+  content: "◆";
+  margin-right: 0.5rem;
+  color: var(--color-highlight);
+}
+
+.check-list li::before {
+  content: "✓";
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+}
+
+.bullet-list li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: var(--color-highlight);
+}
+
+.timeline {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.timeline__item {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(31, 31, 41, 0.08);
+}
+
+.timeline__date {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.contact-card {
+  background: #fff;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(31, 31, 41, 0.08);
+}
+
+.lead {
+  font-size: 1.15rem;
+  max-width: 720px;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  }
+
+  .card-grid,
+  .list-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .list-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

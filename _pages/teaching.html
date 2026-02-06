@@ -1,12 +1,25 @@
 ---
-layout: archive
+layout: default
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
 ---
 
-{% include base_path %}
+<section class="section section--hero">
+  <div class="section__header">
+    <h1>Teaching</h1>
+    <p class="lead">Courses taught, teaching assistantships, and pedagogical initiatives.</p>
+  </div>
+</section>
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<section class="section">
+  <div class="list-grid">
+    {% for item in site.data.teaching %}
+    <article class="list-card">
+      <p class="list-card__meta">{{ item.term }} · {{ item.role }}</p>
+      <h2>{{ item.course }}</h2>
+      <p class="list-card__venue">{{ item.institution }}</p>
+      <p>{{ item.description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>

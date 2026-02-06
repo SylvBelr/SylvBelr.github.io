@@ -1,0 +1,26 @@
+name: "TODO: Your Name"
+role: "TODO: Title / Position"
+affiliation: "TODO: Department, Institution"
+location: "TODO: City, Country"
+email: "TODO: you@example.org"
+hero_summary: |-
+  TODO: Provide a 2–3 sentence research overview drawn from your CV.
+long_bio: |-
+  TODO: Write a longer bio that highlights your research agenda, methods, and
+  current projects. Pull this content from your CV once provided.
+research_interests:
+  - "TODO: Research area 1"
+  - "TODO: Research area 2"
+  - "TODO: Research area 3"
+affiliations:
+  - "TODO: Lab or research group"
+  - "TODO: Center or institute"
+awards:
+  - "TODO: Award or honor (Year)"
+service:
+  - "TODO: Professional service or leadership role"
+cv_link: "/files/TODO-cv.pdf"
+contact:
+  office: "TODO: Office location"
+  phone: "TODO: Phone number"
+  availability: "TODO: Office hours or meeting policy"
