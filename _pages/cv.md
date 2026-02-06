@@ -1,64 +1,55 @@
 ---
-layout: archive
+layout: default
 title: "CV"
 permalink: /cv/
-author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+{% assign profile = site.data.profile %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+<section class="section section--hero">
+  <div class="section__header">
+    <h1>Curriculum Vitae</h1>
+    <p class="lead">Download the full CV or browse the highlights below.</p>
+    <a class="button button--primary" href="{{ profile.cv_link }}">Download CV (PDF)</a>
+  </div>
+</section>
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+<section class="section">
+  <div class="split">
+    <div>
+      <h2>Appointments</h2>
+      <ul class="check-list">
+        <li>TODO: Current position, institution, dates.</li>
+        <li>TODO: Previous position, institution, dates.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Education</h2>
+      <ul class="check-list">
+        <li>TODO: Degree, institution, year.</li>
+        <li>TODO: Degree, institution, year.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<section class="section section--alt">
+  <div class="split">
+    <div>
+      <h2>Selected Awards</h2>
+      <ul class="check-list">
+        {% for award in profile.awards %}
+        <li>{{ award }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2>Service</h2>
+      <ul class="check-list">
+        {% for item in profile.service %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

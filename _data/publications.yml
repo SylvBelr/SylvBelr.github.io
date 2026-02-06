@@ -1,0 +1,20 @@
+- title: "TODO: Publication title"
+  authors: "TODO: Author list"
+  venue: "TODO: Journal or conference"
+  year: 2024
+  type: "Journal Article"
+  links:
+    pdf: "TODO"
+    doi: "TODO"
+    code: "TODO"
+    slides: "TODO"
+- title: "TODO: Working paper title"
+  authors: "TODO: Author list"
+  venue: "Working Paper"
+  year: 2023
+  type: "Working Paper"
+  links:
+    pdf: "TODO"
+    doi: ""
+    code: ""
+    slides: ""

@@ -1,36 +1,39 @@
 ---
-layout: archive
+layout: default
 title: "Publications"
 permalink: /publications/
-author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<section class="section section--hero">
+  <div class="section__header">
+    <h1>Publications</h1>
+    <p class="lead">A curated list of journal articles, working papers, and conference proceedings.</p>
+  </div>
+</section>
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+<section class="section">
+  <div class="list-grid">
+    {% for pub in site.data.publications %}
+    <article class="list-card">
+      <p class="list-card__meta">{{ pub.type }} · {{ pub.year }}</p>
+      <h2>{{ pub.title }}</h2>
+      <p class="list-card__authors">{{ pub.authors }}</p>
+      <p class="list-card__venue">{{ pub.venue }}</p>
+      <div class="list-card__links">
+        {% if pub.links.pdf and pub.links.pdf != "" %}
+        <a class="text-link" href="{{ pub.links.pdf }}">PDF</a>
+        {% endif %}
+        {% if pub.links.doi and pub.links.doi != "" %}
+        <a class="text-link" href="{{ pub.links.doi }}">DOI</a>
+        {% endif %}
+        {% if pub.links.code and pub.links.code != "" %}
+        <a class="text-link" href="{{ pub.links.code }}">Code</a>
+        {% endif %}
+        {% if pub.links.slides and pub.links.slides != "" %}
+        <a class="text-link" href="{{ pub.links.slides }}">Slides</a>
+        {% endif %}
+      </div>
+    </article>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+  </div>
+</section>
